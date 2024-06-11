@@ -23,8 +23,8 @@ public class HotelController {
     }
 
     @GetMapping("/{hotelId}")
-    public ResponseEntity<Hotel> getSingleHotel(@PathVariable String userId){
-        Hotel user = hotelService.get(userId);
+    public ResponseEntity<Hotel> getSingleHotel(@PathVariable String hotelId){
+        Hotel user = hotelService.get(hotelId);
         return ResponseEntity.ok(user);
     }
 
